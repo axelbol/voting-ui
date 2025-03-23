@@ -14,10 +14,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 text-sm">
-
+    <body class="font-sans bg-gray-background text-gray-900 text-sm">
         <header class="flex items-center justify-between px-8 py-4">
-            <a href="#"> Logo </a>
+            <a href="#"><img src="{{ asset('img/secondary-logo.svg') }}" alt="logo"></a>
             <div class="flex items-center space-x-4">
                 @auth
                     <!-- Authentication -->
@@ -50,11 +49,9 @@
                 </a>
             </div>
         </header>
-
             <!-- Page Content -->
             {{-- <main>
                 {{ $slot }}
             </main> --}}
-
     </body>
 </html>
