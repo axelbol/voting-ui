@@ -18,10 +18,37 @@
 
         <header class="flex items-center justify-between px-8 py-4">
             <a href="#"> Logo </a>
-            <div>
+            <div class="flex items-center space-x-4">
+                @auth
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+                    </form>
+                @else
+                    <a
+                        href="{{ route('login') }}"
+                        class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
+                    >
+                        Log in
+                    </a>
+                    @if (Route::has('register'))
+                        <a
+                            href="{{ route('register') }}"
+                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                            Register
+                        </a>
+                    @endif
+                @endauth
                 <a href="#">
-                    <img src="https://gravatar.com/avatar/27205e5c51cb03f862138b22bcb5dc20f94a342e744ff6df1b8dc8af3c865109" alt="avatar" class="w-10 h-10 rounded-full">
+                    <img src="https://gravatar.com/avatar/000000000000000000000000000000000000000000000000000000?d=mp" alt="avatar" class="w-10 h-10 rounded-full">
                 </a>
+            </div>
         </header>
 
             <!-- Page Content -->
