@@ -49,9 +49,21 @@
                 </a>
             </div>
         </header>
-            <!-- Page Content -->
-            {{-- <main>
-                {{ $slot }}
-            </main> --}}
+
+        <!-- Page Content -->
+        <main class="container mx-auto max-w-custom flex">
+            <div class="w-70 mr-5">
+                Add idea form goes here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quam, veritatis assumenda, aspernatur dolorum minima et non similique eligendi, deserunt odit laborum ut quidem iure amet repellat! In incidunt corrupti mollitia inventore. Ullam non magni aliquam hic doloremque modi laborum.
+            </div>
+            <div class="w-175">
+                <nav class="flex items-center justify-between text-xs">
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li><a href="#" class="border-b-4 pb-3 border-blue">All Ideas (87)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-500 ease-in border-b-4 pb-3 hover:border-blue">All Ideas (87)</a></li> ####22.38
+                    </ul>
+                </nav>
+            </div>
+            {{-- {{ $slot }} --}}
+        </main>
     </body>
 </html>
